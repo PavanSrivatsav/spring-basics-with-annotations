@@ -8,7 +8,7 @@ public class HockeyCoach implements Coach {
 
 	private FortuneService fortuneService;
 
-	@Autowired
+	/*@Autowired
 	public HockeyCoach(FortuneService fortuneService) { // if only one
 														// constructor is
 														// present then spring
@@ -17,7 +17,7 @@ public class HockeyCoach implements Coach {
 														// annotation.
 		super();
 		this.fortuneService = fortuneService;
-	}
+	}*/
 
 	@Override
 	public String getDailyWorkout() {
