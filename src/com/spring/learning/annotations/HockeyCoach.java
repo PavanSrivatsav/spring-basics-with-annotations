@@ -2,12 +2,12 @@ package com.spring.learning.annotations;
 
 import org.springframework.stereotype.Component;
 
-@Component("tennisCoachBean")
-public class TennisCoach implements Coach {
+@Component
+public class HockeyCoach implements Coach {
 
 	@Override
 	public String getDailyWorkout() {
-		return "Tennis coach : practice backhand";
+		return "hockey coach : practice penalty shots";
 	}
 
 }
