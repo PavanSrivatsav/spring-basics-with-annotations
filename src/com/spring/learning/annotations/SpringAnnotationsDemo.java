@@ -20,6 +20,12 @@ public class SpringAnnotationsDemo {
 
 		context.close();
 
+		context.refresh();
+		Coach baseball = context.getBean("baseballCoach", Coach.class); // default-bean
+		System.out.println(baseball.getDailyWorkout());
+		System.out.println(baseball.getDailyFortune());
+
+		context.close();
 	}
 
 }
