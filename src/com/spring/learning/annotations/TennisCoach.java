@@ -1,5 +1,6 @@
 package com.spring.learning.annotations;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component("tennisCoachBean")
@@ -7,14 +8,8 @@ public class TennisCoach implements Coach {
 
 	private FortuneService fortuneService;
 
-	// @Autowired
-	public TennisCoach(FortuneService fortuneService) { // if only one
-														// constructor is
-														// present then spring
-														// will automatically
-														// use @Autowired
-														// annotation.
-		super();
+	@Autowired
+	public void setFortuneService(FortuneService fortuneService) { // setter-Autowired-example
 		this.fortuneService = fortuneService;
 	}
 

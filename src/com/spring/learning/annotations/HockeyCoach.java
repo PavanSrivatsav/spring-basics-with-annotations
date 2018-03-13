@@ -9,7 +9,12 @@ public class HockeyCoach implements Coach {
 	private FortuneService fortuneService;
 
 	@Autowired
-	public HockeyCoach(FortuneService fortuneService) {
+	public HockeyCoach(FortuneService fortuneService) { // if only one
+														// constructor is
+														// present then spring
+														// will automatically
+														// use @Autowired
+														// annotation.
 		super();
 		this.fortuneService = fortuneService;
 	}
