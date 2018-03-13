@@ -2,12 +2,20 @@ package com.spring.learning.annotations;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
 public class HockeyCoach implements Coach {
 
 	private FortuneService fortuneService;
+
+	public HockeyCoach() {
+
+	}
+
+	@Value("${coachCountry}")
+	private String coach;
 
 	@Autowired
 	public HockeyCoach(@Qualifier("sadFortuneService") FortuneService fortuneService) { // if
@@ -35,6 +43,10 @@ public class HockeyCoach implements Coach {
 	@Override
 	public String getDailyFortune() {
 		return "hockey coach : " + fortuneService.getFortune();
+	}
+
+	public String getCouchCountry() {
+		return coach;
 	}
 
 }

@@ -27,6 +27,14 @@ public class SpringAnnotationsDemo {
 		System.out.println(baseball.getDailyFortune());
 
 		context.close();
+
+		context.refresh();
+		System.out.println("============");
+		HockeyCoach h = new HockeyCoach();
+		System.out.println(h.getCouchCountry());
+
+		context.close();
+
 	}
 
 }
