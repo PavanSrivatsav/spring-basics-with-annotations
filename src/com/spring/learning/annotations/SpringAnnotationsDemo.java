@@ -30,8 +30,8 @@ public class SpringAnnotationsDemo {
 
 		context.refresh();
 		System.out.println("============");
-		HockeyCoach h = new HockeyCoach();
-		System.out.println(h.getCouchCountry());
+		HockeyCoach h = context.getBean("hockeyCoach", HockeyCoach.class);
+		System.out.println("coach country=>" + h.getCoachCountry());
 
 		context.close();
 

@@ -45,7 +45,7 @@ public class HockeyCoach implements Coach {
 		return "hockey coach : " + fortuneService.getFortune();
 	}
 
-	public String getCouchCountry() {
+	public String getCoachCountry() {
 		return coach;
 	}
 
