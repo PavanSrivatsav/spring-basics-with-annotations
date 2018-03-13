@@ -9,11 +9,10 @@ public class TennisCoach implements Coach {
 
 	private FortuneService fortuneService;
 
-	/*@Autowired
-	@Qualifier("happyFortuneService")
-	public void setFortuneService(FortuneService fortuneService) { // setter-Autowired-example
+	@Autowired
+	public void setFortuneService(@Qualifier("happyFortuneService") FortuneService fortuneService) { // setter-Autowired-example
 		this.fortuneService = fortuneService;
-	}*/
+	}
 
 	@Override
 	public String getDailyWorkout() {
