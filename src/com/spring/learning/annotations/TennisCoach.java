@@ -1,5 +1,8 @@
 package com.spring.learning.annotations;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
@@ -24,6 +27,16 @@ public class TennisCoach implements Coach {
 	@Override
 	public String getDailyFortune() {
 		return "Tennis coach : " + fortuneService.getFortune();
+	}
+
+	@PostConstruct
+	public String afterContext() {
+		return "DI successfully done";
+	}
+
+	@PreDestroy
+	public String beforeDestroyingContext() {
+		return "context going to end";
 	}
 
 }

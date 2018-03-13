@@ -35,6 +35,13 @@ public class SpringAnnotationsDemo {
 
 		context.close();
 
+		context.refresh();
+		System.out.println("========");
+		TennisCoach t = new TennisCoach();
+		System.out.println(t.afterContext());
+		System.out.println(t.beforeDestroyingContext());
+		context.close();
+
 	}
 
 }
